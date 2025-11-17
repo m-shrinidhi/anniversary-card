@@ -8,7 +8,7 @@ const alternatives = [
         images: "./assets/images/2.gif"
     },
     {
-        text: "YOf cource you're still clicking on poop",
+        text: "Of cource you're still clicking on poop",
         images: "./assets/images/3.gif"
     },
     {
