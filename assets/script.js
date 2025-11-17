@@ -1,32 +1,24 @@
 const alternatives = [
     {
-        text: "HOOW DARE😭",
+        text: "Wow… you really clicked 💩? KNEW IT",
         images: "./assets/images/1.gif"
     },
     {
-        text: "Bro… try again before I beat you 😒",
+        text: "Think again, stinky. 💩",
         images: "./assets/images/2.gif"
     },
     {
-        text: "MFFFF 😤",
+        text: "YOf cource you're still clicking on poop",
         images: "./assets/images/3.gif"
     },
     {
-        text: "Adi please… don’t make me give you a bjj 😩😂",
+        text: "Last chance before I cry 😭",
         images: "./assets/images/4.gif"
-    },
-    {
-        text: "You're really testing my patience huh 😌",
-        images: "./assets/images/1.gif"
-    },
-    {
-        text: "Fine. I’ll just sit here and cry then 😭",
-        images: "./assets/images/2.gif"
     }
 ];
 
 const ohyes = {
-    text: "Knew you'd say YES, MY POOKIE FOR A REASON 😎❤️\nNow come gimme a hug.",
+    text: "I KNEW you'd choose ❤️ You're stuck with me forever 😘",
     images: "./assets/images/yes.gif"
 };
 
@@ -39,27 +31,29 @@ const errorButton = document.querySelector('.button__error');
 let count = 0;
 
 function updateDisplay(item) {
-    console.log(item);
     cat.src = item.images;
     text.innerHTML = item.text;
 }
 
 errorButton.addEventListener('click', () => {
     count = 0;
-    updateDisplay(alternatives[count]);
+    updateDisplay(alternatives[0]);
     buttons.forEach(btn => btn.style.display = 'inline-block');
     errorButton.style.display = 'none';
 });
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
-        if(button.textContent === 'YES'){
+        const val = button.textContent.trim();
+
+        if (val.includes("YES") || val.includes("❤️")) {
             updateDisplay(ohyes);
             buttons.forEach(btn => btn.style.display = 'none');
         }
-        if (button.textContent === 'NO'){
+
+        if (val.includes("NO") || val.includes("💩")) {
             count++;
-            if(count < alternatives.length){
+            if (count < alternatives.length) {
                 updateDisplay(alternatives[count]);
             } else {
                 buttons.forEach(btn => btn.style.display = 'none');
