@@ -18,7 +18,7 @@ const alternatives = [
 ];
 
 const ohyes = {
-    text: "I KNEW you'd choose ❤️ You're stuck with me forever 😘",
+    text: "I KNEW you'd choose ❤️ You're stuck with me forever MWAH 😘",
     images: "./assets/images/yes.gif"
 };
 
