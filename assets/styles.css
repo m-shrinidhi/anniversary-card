@@ -49,20 +49,21 @@ body {
     font-family: "Dancing Script", cursive, sans-serif;
 }
 
+/* UPDATED FOR PORTRAIT GIF */
 .heart {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 300px;
-    height: 300px;
+    height: 250px;       /* keeps portrait GIF contained */
     margin-bottom: 15px;
-    background-repeat: no-repeat;
-    background-size: contain;
+    overflow: hidden;    /* prevents text overlap */
 }
 
 .img-fluid {
     width: 100%;
-    height: auto;
+    max-height: 250px;   /* prevents GIF from growing too tall */
+    object-fit: contain; /* keeps proportions */
     display: block;
     margin: 0 auto;
 }
@@ -73,7 +74,7 @@ body {
     flex-wrap: wrap; 
 }
 
-/* BUTTONS UPDATED */
+/* BUTTONS */
 .button {
     font-family: "Raleway", sans-serif;
     border: none;
@@ -88,10 +89,7 @@ body {
     display: inline-block;
 }
 
-.button.yes {
-    font-size: 20px;
-}
-
+.button.yes,
 .button.no {
     font-size: 20px;
 }
@@ -103,7 +101,7 @@ body {
     box-shadow: 5px 5px 5px #AA1B2D;
 }
 
-.button.button__error{
+.button.button__error {
     width: 100%;
     display: none;
 }
