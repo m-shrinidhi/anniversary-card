@@ -1,11 +1,35 @@
 const alternatives = [
-    {text:"", images:"./assets/images/1.gif"},
-    {text:"I promise, it will be unforgettable.", images:"./assets/images/2.gif"},
-    {text:"Think again...", images:"./assets/images/3.gif"},
-    {text:"Come on now, say yes!", images:"./assets/images/4.gif"},
+    {
+        text: "HOOW DARE😭",
+        images: "./assets/images/1.gif"
+    },
+    {
+        text: "Bro… try again before I beat you 😒",
+        images: "./assets/images/2.gif"
+    },
+    {
+        text: "MFFFF 😤",
+        images: "./assets/images/3.gif"
+    },
+    {
+        text: "Adi please… don’t make me give you a bjj 😩😂",
+        images: "./assets/images/4.gif"
+    },
+    {
+        text: "You're really testing my patience huh 😌",
+        images: "./assets/images/1.gif"
+    },
+    {
+        text: "Fine. I’ll just sit here and cry then 😭",
+        images: "./assets/images/2.gif"
+    }
 ];
 
-const ohyes = {text:"I knew you would accept!", images:"./assets/images/yes.gif"};
+const ohyes = {
+    text: "Knew you'd say YES, MY POOKIE FOR A REASON 😎❤️\nNow come gimme a hug.",
+    images: "./assets/images/yes.gif"
+};
+
 const title = document.querySelector('.title');
 const text = document.querySelector('.text');
 const cat = document.querySelector('.cat');
@@ -13,6 +37,7 @@ const buttons = document.querySelectorAll('.button');
 const errorButton = document.querySelector('.button__error');
 
 let count = 0;
+
 function updateDisplay(item) {
     console.log(item);
     cat.src = item.images;
